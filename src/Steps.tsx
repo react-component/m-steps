@@ -27,8 +27,6 @@ export default class Steps extends Component<IStepsProps, any> {
     progressDot: false,
   };
 
-  Item: React.ComponentClass;
-
   render() {
     const {
       prefixCls, style = {}, className, children, direction,
