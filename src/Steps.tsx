@@ -1,6 +1,7 @@
 /* eslint react/no-did-mount-set-state: 0 */
-import React, { cloneElement, Children, Component } from 'react';
-import classNames from 'classnames';
+import * as React from 'react';
+import { cloneElement, Children, Component } from 'react';
+import * as classNames from 'classnames';
 
 export interface IStepsProps {
   prefixCls?: string;
@@ -37,7 +38,7 @@ export default class Steps extends Component<IStepsProps, any> {
     const filteredChildren = React.Children.toArray(children).filter(c => !!c);
     const adjustedlabelPlacement = !!progressDot ? 'vertical' : labelPlacement;
     const classString = classNames(prefixCls, `${prefixCls}-${direction}`, className, {
-      [`${prefixCls}-${size}`]: size,
+      [`${prefixCls}-${size}`]: Boolean(size),
       [`${prefixCls}-label-${adjustedlabelPlacement}`]: direction === 'horizontal',
       [`${prefixCls}-dot`]: !!progressDot,
     });

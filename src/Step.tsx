@@ -1,5 +1,5 @@
-import React from 'react';
-import classNames from 'classnames';
+import * as React from 'react';
+import * as classNames from 'classnames';
 
 function isString(str) {
   return typeof str === 'string';
@@ -29,7 +29,7 @@ export default class Step extends React.Component<IStepProps, any> {
     } = this.props;
     let iconNode;
     const iconClassName = classNames(`${prefixCls}-icon`, `${iconPrefix}icon`, {
-      [`${iconPrefix}icon-${icon}`]: icon && isString(icon),
+      [`${iconPrefix}icon-${icon}`]: Boolean(icon) && isString(icon),
       [`${iconPrefix}icon-check`]: !icon && status === 'finish',
       [`${iconPrefix}icon-cross`]: !icon && status === 'error',
     });
@@ -66,7 +66,7 @@ export default class Step extends React.Component<IStepProps, any> {
       `${prefixCls}-item`,
       `${prefixCls}-item-${status}`,
       className,
-      { [`${prefixCls}-item-custom`]: icon },
+      { [`${prefixCls}-item-custom`]: Boolean(icon) },
     );
     const stepItemStyle = { ...style };
     if (itemWidth) {
