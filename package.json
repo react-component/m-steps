@@ -68,7 +68,7 @@
     "pre-commit": "1.x",
     "querystring": "^0.2.0",
     "rmc-dialog": "~0.0.1-alpha.4",
-    "rc-tools": "6.x",
+    "rc-tools": "8.x",
     "react": "15.x",
     "react-dom": "15.x",
     "react-test-renderer": "^15.3.2"
