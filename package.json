@@ -1,6 +1,6 @@
 {
   "name": "rmc-steps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "steps ui component for react mobile",
   "keywords": [
     "react",
@@ -9,7 +9,6 @@
     "mobile steps"
   ],
   "main": "./lib/index",
-  "module": "./es/index",
   "files": [
     "lib",
     "assets/iconfont.css",
